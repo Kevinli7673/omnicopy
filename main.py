@@ -107,12 +107,3 @@ async def delete_campaign(id: int, session: SessionDep):
         raise HTTPException(status_code=404)
     session.delete(data)
     session.commit()
-
-# @app.delete("/campaign/{id}")
-# async def update_campaign(id: int):
-
-#     for index, campaign in enumerate(data):
-#         if campaign.get("campaign_id") == id:
-#             data.pop(index)
-#             return Response(status_code=204)
-#     raise HTTPException(status_code=404)
